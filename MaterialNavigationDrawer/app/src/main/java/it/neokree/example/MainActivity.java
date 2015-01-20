@@ -9,8 +9,6 @@ import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
 
-import it.neokree.example.NavigationDrawerWithAccountActivity;
-
 /**
  * Created by neokree on 30/12/14.
  */

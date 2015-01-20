@@ -1,18 +1,13 @@
 package it.neokree.example;
 
-import android.app.Activity;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-
 import android.support.v4.app.Fragment;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
 
 /**
  * Created by neokree on 24/11/14.

@@ -5,10 +5,9 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import it.neokree.materialnavigationdrawer.MaterialAccount;
 import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
-import it.neokree.materialnavigationdrawer.MaterialSection;
-import it.neokree.materialnavigationdrawer.MaterialSectionListener;
+import it.neokree.materialnavigationdrawer.elements.MaterialSection;
+import it.neokree.materialnavigationdrawer.elements.listeners.MaterialSectionListener;
 
 public class NavigationDrawerNoHeaderActivity extends MaterialNavigationDrawer {
 

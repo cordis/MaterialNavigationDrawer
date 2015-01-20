@@ -1,20 +1,17 @@
 package it.neokree.example;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
-import it.neokree.materialnavigationdrawer.MaterialAccount;
-import it.neokree.materialnavigationdrawer.MaterialAccountListener;
 import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
-import it.neokree.materialnavigationdrawer.MaterialSection;
-import it.neokree.materialnavigationdrawer.MaterialSectionListener;
+import it.neokree.materialnavigationdrawer.elements.MaterialAccount;
+import it.neokree.materialnavigationdrawer.elements.MaterialSection;
+import it.neokree.materialnavigationdrawer.elements.listeners.MaterialAccountListener;
+import it.neokree.materialnavigationdrawer.elements.listeners.MaterialSectionListener;
 
 /**
  * Created by neokree on 30/12/14.
  */
-
 public class NavigationDrawerTest extends MaterialNavigationDrawer implements MaterialAccountListener, MaterialSectionListener {
 
     MaterialAccount account;
@@ -27,7 +24,7 @@ public class NavigationDrawerTest extends MaterialNavigationDrawer implements Ma
         this.allowArrowAnimation();
         // add first account
 
-        account = new MaterialAccount("Hello " + getUsername(), "", new ColorDrawable(Color.parseColor("#9e9e9e")), this.getResources().getDrawable(R.drawable.mat2));
+        account = new MaterialAccount(getResources(), "Hello " + getUsername(), "", R.drawable.photo, R.drawable.mat2);
         this.addAccount(account);
 
         // set listener

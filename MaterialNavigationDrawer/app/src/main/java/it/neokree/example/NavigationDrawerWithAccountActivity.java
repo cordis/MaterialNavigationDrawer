@@ -1,19 +1,17 @@
 package it.neokree.example;
 
-
-import android.graphics.drawable.ColorDrawable;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import it.neokree.materialnavigationdrawer.MaterialAccount;
-import it.neokree.materialnavigationdrawer.MaterialAccountListener;
 import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
-import it.neokree.materialnavigationdrawer.MaterialSection;
-import it.neokree.materialnavigationdrawer.MaterialSectionListener;
+import it.neokree.materialnavigationdrawer.elements.MaterialAccount;
+import it.neokree.materialnavigationdrawer.elements.MaterialSection;
+import it.neokree.materialnavigationdrawer.elements.listeners.MaterialAccountListener;
+import it.neokree.materialnavigationdrawer.elements.listeners.MaterialSectionListener;
 
-public class NavigationDrawerWithAccountActivity extends MaterialNavigationDrawer implements MaterialAccountListener{
+public class NavigationDrawerWithAccountActivity extends MaterialNavigationDrawer implements MaterialAccountListener {
 
     MaterialAccount account;
     MaterialSection section1, section2, recorder, night, last, settingsSection;
@@ -23,13 +21,16 @@ public class NavigationDrawerWithAccountActivity extends MaterialNavigationDrawe
 
 
         // add first account
-        account = new MaterialAccount("NeoKree","neokree@gmail.com",new ColorDrawable(Color.parseColor("#9e9e9e")),this.getResources().getDrawable(R.drawable.bamboo));
+        account = new MaterialAccount(
+                getResources(), "NeoKree", "neokree@gmail.com", R.drawable.photo, R.drawable.bamboo);
         this.addAccount(account);
 
-        MaterialAccount account2 = new MaterialAccount("Hatsune Miky","hatsune.miku@example.com",getResources().getDrawable(R.drawable.photo2),this.getResources().getDrawable(R.drawable.mat2));
+        MaterialAccount account2 = new MaterialAccount(
+                getResources(), "Hatsune Miky", "hatsune.miku@example.com", R.drawable.photo2, R.drawable.mat2);
         this.addAccount(account2);
 
-        MaterialAccount account3 = new MaterialAccount("Example","example@example.com",getResources().getDrawable(R.drawable.photo),this.getResources().getDrawable(R.drawable.mat3));
+        MaterialAccount account3 = new MaterialAccount(
+                getResources(), "Example", "example@example.com", R.drawable.photo, R.drawable.mat3);
         this.addAccount(account3);
 
         // set listener
@@ -107,7 +108,7 @@ public class NavigationDrawerWithAccountActivity extends MaterialNavigationDrawe
         public void run() {
             try {
                 Thread.sleep(5000);
-                account.setPhoto(getResources().getDrawable(R.drawable.photo));
+                account.setPhoto(R.drawable.photo);
 
                 runOnUiThread(new Runnable() {
                     @Override
